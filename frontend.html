@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+<head> 
+    <meta charset='utf-8'>
+    <title>YouTube Transcript Summarizer
+    </title>
+</head>
+<body>
+  <p align=center><h1> Enter youtube link</h1></p>
+
+  <form action="http://localhost:8080/summarize" method="post" enctype="multipart/form-data">
+  Link to youtube video:      <input type="text" name="youtube_link" />
+  <p></p>
+  Select a file to summarize: <input type="file" name="input_file" />
+  <p></p>
+  <input type="submit" value="Start upload" />
+</form>
+
+
