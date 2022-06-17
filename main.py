@@ -6,18 +6,18 @@ from transformers import pipeline
 
 app = Bottle()
 # app_path = 
-
+file1 = "frontend.html"
 
 @app.route('/hello')
 def hello():
     return "Hello World!"
 
 @app.route('/')
-def home(filename = "frontend.html"):
-    return static_file(filename, root='./')
+def home():
+    return static_file(file1, root='./')
 
 @app.post('/')
-def summarize(file1 = "frontend.html"):
+def summarize():
     youtube_link = request.forms.get('youtube_link')
     youtube_id_match_object = re.search(r'.*=(.*)$',youtube_link)
     youtube_id = youtube_id_match_object.groups(0)[0]
@@ -39,17 +39,19 @@ def summarize(file1 = "frontend.html"):
 
         summary_file = open("summary.txt","w")
         summary_file.write(summary)
-    # except youtube_transcript_api._errors.TranscriptsDisabled:
     except TranscriptsDisabled:
         print(TranscriptsDisabled.CAUSE_MESSAGE)
+    return static_file(file1, root = './')
         
+@error(500)
+def error500(error):
+    return static_file(file1, root='./')
 
 
 
 
     # print(text_dictionary_list)
     # print(transcript_text) 
-    return static_file(file1, root = './')
 
 
 run(app, host='localhost', port=8080, reloader=True)
