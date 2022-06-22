@@ -66,7 +66,8 @@ def summarize(file1 = "frontend.html"):
 
     summary = get_summary(transcript_text)
 
-    return static_file(file1, root = './')
+    # return static_file(file1, root = './')
+    return template('summary',summary_text=summary)
 
 
 if __name__ == '__main__':
