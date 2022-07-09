@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"> 
-<head> 
-    <meta charset='utf-8'>
-    <title>YouTube Transcript Summarizer
-    </title>
-</head>
-<body>
-  <center>
-    <h1>YouTube Transcript Summarizer</h1>
-  </center>
-
-
-  <form action="http://localhost:8080/" method="post" enctype="multipart/form-data">
-
-  Link to youtube video:      <input type="text" name="youtube_link" />
-  <p></p>
-  Select a file to summarize: <input type="file" name="input_file" />
-  <p></p>
-
-  <input type="submit" value="Start summarizing" />
-
-  </form>
-
-
+<head>
+  <meta charset='utf-8'>
+  <title>YouTube Transcript Summarizer
+  </title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="seperate">
+      <center>
+        <h1><span class="color-background"> YouTube Transcript Summarizer </span></h1>
+      </center>
+      <form action="http://localhost:8080/" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <label>  Link to youtube video: <input type="text" name="youtube_link" required /></label>
+          <p></p>
+          <label>  Select a file to summarize: <input type="file" name="input_file" /></label>
+        </fieldset>
+        <p></p>
+        <!--<input type="submit" value="Start summarizing" />-->
+        <div class="pink">
+          <button type="submit">Start summarising</button>
+        </div>
+      </form>
+    </div>
+  </body>
