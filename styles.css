@@ -29,7 +29,7 @@ label {
     display: block;
 }
 input {
-    background-color: rgb(221, 135, 64);
+
     border: none;
     padding: 2.1px;
     color: #f5f6f7;
@@ -43,11 +43,13 @@ input {
     max-width: 600px;
 }
 button {
-    background-color: rgb(224, 127, 62);
+    
+    text-align: center;
     border-color: #f5f6f7;
-    color: #f5f6f7;
+    color: black;
 }
 .pink {
-    opacity: 0.7;
-    border: #f5f6f7;
+    align-content: center;
+    padding-left: 230px;
+    padding-right: 200px;
 }
