@@ -32,7 +32,8 @@ input {
 
     border: none;
     padding: 2.1px;
-    color: #f5f6f7;
+    color: black;
+    text-decoration-color: black;
 }
 .seperate {
     width: 80%;
